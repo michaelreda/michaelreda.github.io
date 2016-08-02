@@ -10,9 +10,9 @@ $faculty = mysql_real_escape_string($data->faculty);
 $dash = mysql_real_escape_string($data->dash);
 
 
-$host="openshift";
+$host="localhost";
 
-mysql_connect($host,"adminMfcGa1s","N_K8QfcpBSA-") or die(mysql_error());
+mysql_connect($host,"root","") or die(mysql_error());
 mysql_select_db("pyf") or die(mysql_error());
 mysql_query("INSERT INTO members(first_name,last_name,age,home_city,mobile_number,church,faculty,class)VALUES('".$first_name."','".$last_name."','".$age."','".$homeCity."','".$mobile."','".$church."','".$faculty."','".$dash."')");
 $id = json_decode(mysql_insert_id());
