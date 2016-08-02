@@ -1,0 +1,80 @@
+<ion-view hide-back-button="true" is-enabled="false" ng-init="init()" name="view" data-ng-controller="joinOurFamilyCtrl" title="Join our family" id="page6" class=" ">
+    <ion-content padding="true" class="has-header">
+        <form  id="joinOurFamily-form1" name= "form" class="list ">
+			
+            <ion-list id="joinOurFamily-list2" name="ion-list" class=" ">
+                <label class="item item-input "  id="joinOurFamily-input1">
+                    <span class="input-label">First Name</span>
+                    <input type="text" id="first_name" ng-model="first_name" placeholder="">
+                </label>
+                <label class="item item-input "  id="joinOurFamily-input1">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" id="last_name" ng-model="last_name" placeholder="">
+                </label>
+                <label class="item item-input " id="joinOurFamily-input2">
+                    <span class="input-label">Age</span>
+                    <input type="text" name="age" id="age" ng-model="age" placeholder="">
+                </label>
+                <label class="item item-input " id="joinOurFamily-input4">
+                    <span class="input-label">your home city</span>
+                    <input type="text" id="homeCity" ng-model="homeCity" placeholder="">
+                </label>
+				 <label class="item item-input "  id="joinOurFamily-input5">
+                    <span class="input-label">Your mobile number</span>
+                    <input type="text" id="mobile" ng-model="mobile" placeholder="">
+                </label>
+                <label class="item item-input " id="joinOurFamily-input3">
+                    <span class="input-label">your church</span>
+                    <input type="text" id="church" ng-model="church" placeholder="">
+                </label>
+                <label class="item item-select " name="textF" id="joinOurFamily-select1" >
+                    <span class="input-label">select your faculty</span>
+                    <select ng-model="faculty" name="faculty">
+						<option value="" > - Select - </option>
+                        <option value="ENG">Engineering</option>
+                        <option value="MET">MET</option>
+                        <option value="IET">IET</option>
+                        <option value="EMS">EMS</option>
+                        <option value="CIVIL">Civil</option>
+                        <option value="ARCH">Architecture</option>
+                        <option value="PHARM">Pharmacy</option>
+                        <option value="APP">Applied arts</option>
+                        <option value="MNG">Management</option>
+                        <option value="BI">BI</option>
+                        <option value="LAW">Law</option>
+                    </select>
+                </label>
+                <label class="item item-select " id="joinOurFamily-select2">
+                    <span class="input-label">select your class</span>
+                    <select ng-model="dash" name="dof3a" >
+						<option value="" > - Select - </option>
+						<option value="40">40-</option>
+                        <option value="37">37-</option>
+                        <option value="34">34-</option>
+                        <option value="31">31-</option>
+                        <option value="28">28-</option>
+                        <option value="25">25-</option>
+						<option value="22">22-</option>
+						<option value="19">19-</option>
+						<option value="16">16-</option>
+						<option value="13">13-</option>
+						<option value="10">10-</option>
+						<option value="7">7-</option>
+						<option value="4">4-</option>
+						<option value="1">1-</option>
+                    </select>
+                </label>
+            </ion-list>
+			
+			<div class=" glow-button"    ng-click="Join(first_name,last_name,age,homeCity,mobile,church,faculty,dash)">
+				<span class="height-fix">
+					<a class="content">
+						<i  id="joinOurFamily-button1" class=" button button-stable  button-block " >Join </i>
+					</a>
+				</span>
+			</div>
+			
+            
+        </form>
+    </ion-content>
+</ion-view>

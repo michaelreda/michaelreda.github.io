@@ -1,0 +1,10 @@
+<ion-view title="On wings weekly summary"  ng-controller="weeklySummaryCtrl" id="page5" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="weeklySummary-list1" class=" ">
+            <ion-item id="summary_item" ng-repeat="summary in summaries| orderBy:'date':true" ng-click="open_summary({{summary.id}})" >{{summary.title}}
+                <span class="item-note">{{summary.date}}</span>
+            </ion-item>
+            
+        </ion-list>
+    </ion-content>
+</ion-view>

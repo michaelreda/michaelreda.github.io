@@ -1,0 +1,43 @@
+
+<ion-view  data-ng-controller="pyfMembersCtrl" ng-init="init()"  id="pyfMembers"  title="Pyf Members"  class=" ">
+    <ion-content  padding="true" class="has-header">
+       
+        <div class="table-responsive">
+            <table class="table table-dynamic table-tools table-striped">
+                <thead>
+                    <tr>
+                        <th><b>Name</b></th>
+                        <th><b>Faculty</b></th>
+                        <th><b>Class</b></th>
+                        <th><b><center>Actions</center></b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr   ng-repeat="member in members|orderBy:'first_name':false">
+                        <td>{{member.first_name}} {{member.last_name}}</td>
+                        <td>{{member.faculty}}</td>
+                        <td>{{member.class}}</td>
+                        <td>
+                            <button style="border-radius:20px;line-height:20px;min-height: 20px;min-width: 30px;" ng-click="member_info(member.id)" class="button button-balanced">
+                                <i class="ion-information"></i>
+                            </button>
+                            <button style="border-radius:20px;line-height:20px;min-height: 20px;min-width: 30px;" class="button button-energized">
+                                <i class="ion-edit"></i>
+                            </button>
+                            <button style="border-radius:20px;line-height:20px;min-height: 20px;min-width: 30px;" ng-click="delete_member(member.id,member.first_name+' '+member.last_name)" class="button button-assertive">
+                                <i class="ion-trash-a"></i>
+                            </button>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+         <ion-dots id="spinner" style=" position:fixed;top:50%;left:50%;" icon="dots" class="spinner spinner-dots"></ion-dots>
+         
+    </ion-content>
+
+</ion-view>
+
+

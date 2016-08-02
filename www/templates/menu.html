@@ -1,0 +1,38 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-calm">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+        <ion-header-bar class="bar-stable">
+            <div class="title">Menu</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header">
+            <ion-list id="menu-list3" class=" ">
+                <ion-item id="menu-list-item1" ui-sref="menu.home" menu-close="" class="  ">Home</ion-item>
+                <ion-item class="item-icon-right positive  " id="menu-list-item2" ui-sref="menu.upcomingEvents" menu-close="">Upcoming events
+                    <i class="icon ion-android-calendar"></i>
+                </ion-item>
+                <ion-item id="menu-list-item3" class="  " ui-sref="menu.weeklySummary" menu-close="">On Wings weekly summary</ion-item>
+                <!--  <ion-item class="item-icon-right  " id="menu-list-item8" ui-sref="menu.joinOurFamily" menu-close="">Join our family
+                      <i class="icon ion-ios-people"></i>
+                  </ion-item>  -->
+                <div ng-if="user_data.access_level == 1" >
+                    <ion-header-bar class="bar-stable" style="position: relative;">
+                        <div class="title">Admins Menu</div>
+                    </ion-header-bar>
+
+
+                    <ion-item class="item-icon-right  " id="menu-list-item2" ui-sref="menu.pyfMembers" menu-close="">PYF members
+                        <i class="icon ion-ios-people"></i>
+                    </ion-item>
+                </div>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

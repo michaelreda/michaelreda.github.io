@@ -1,0 +1,10 @@
+/* Empty. Add your own CSS if you like */
+
+
+table.sortable thead {
+    
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+
