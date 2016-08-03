@@ -118,6 +118,11 @@ angular.module('app.controllers', ['ionic'])
           //  $('#side-menu21').hide();
             // Triggered on a button click, or some other target
             $scope.Join = function (first_name, last_name, age, homeCity, mobile, church, faculty, dash) {
+                 $http.get("js/get_summaries.php")
+                    .then(function (response) {
+                        $scope.summaries = response.data.records;
+                    });
+                
                 
                 if (first_name == undefined || last_name == undefined || age == undefined || homeCity == undefined || mobile == undefined || church == undefined || faculty == undefined || dash == undefined) {
                     var alertPopup = $ionicPopup.alert({
